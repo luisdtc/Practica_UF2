@@ -6,7 +6,6 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class VehiculoFrenarTest {
-
     @BeforeEach
     void setUp() {
     }
