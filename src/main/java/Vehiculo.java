@@ -1,5 +1,5 @@
 public class Vehiculo {
-    public Vehiculo() {
+    public Vehiculo(String marca, String modelo, int velocidadMaxima) {
         System.out.println("constructor de vehiculo");
     }
 }
