@@ -3,7 +3,7 @@ public class Vehiculo {
     private final String marca;
     private final String modelo;
     private final int velocidadMaxima;
-    private final int velocidadActual;
+    private int velocidadActual;
 
     public Vehiculo(String marca, String modelo, int velocidadMaxima) {
         this.marca = marca;
@@ -20,14 +20,20 @@ public class Vehiculo {
         return modelo;
     }
 
-    public void frenar(int decremento){
-    }
-    
     public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
 
     public int getVelocidadActual() {
         return velocidadActual;
+    }
+    public void acelerar(int incremento) {
+        if (incremento <= 0) {
+            System.out.println("Aceleración no válida: debe ser un número entero positivo.");
+            return;
+        }
+    }
+    public void frenar(int decremento) {
+        if (decremento > 0) this.velocidadActual = Math.max(this.velocidadActual - decremento, 0);
     }
 }
