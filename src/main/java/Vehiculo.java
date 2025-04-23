@@ -1,12 +1,15 @@
 public class Vehiculo {
 
-    private String marca;
-    private String modelo;
-    private int velocidadMaxima;
-    private int velocidadActual;
+    private final String marca;
+    private final String modelo;
+    private final int velocidadMaxima;
+    private final int velocidadActual;
 
     public Vehiculo(String marca, String modelo, int velocidadMaxima) {
-        System.out.println("constructor vehiculo");
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadMaxima = velocidadMaxima;
+        this.velocidadActual = 0;
     }
 
     public String getMarca() {
