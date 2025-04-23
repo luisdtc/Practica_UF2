@@ -12,6 +12,9 @@ public class Vehiculo {
         this.velocidadActual = 0;
     }
 
+    public void acelerar(int incremento){
+    }
+
     public String getMarca() {
         return marca;
     }
