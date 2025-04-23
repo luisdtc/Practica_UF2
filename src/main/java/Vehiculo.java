@@ -41,4 +41,7 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidadActual;
     }
+    public void frenar(int decremento) {
+        if (decremento > 0) this.velocidadActual = Math.max(this.velocidadActual - decremento, 0);
+    }
 }
