@@ -20,6 +20,9 @@ public class Vehiculo {
         return modelo;
     }
 
+    public void frenar(int decremento){
+    }
+    
     public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
