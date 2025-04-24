@@ -12,14 +12,14 @@ public class VehiculoPararTest {
     }
 
     @Test
-    void testPararTC_PA_01() {
+    void testPararVehiculoEnMarcha() {
         vehiculo.acelerar(80);
         vehiculo.parar();
         assertEquals(0, vehiculo.getVelocidadActual());
     }
 
     @Test
-    void testPararTC_PA_02() {
+    void testPararVehiculoDetenido() {
         vehiculo.parar();
         assertEquals(0, vehiculo.getVelocidadActual());
     }
