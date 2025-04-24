@@ -26,5 +26,16 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidadActual;
     }
-} 
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getVelocidadMaxima() {
+        return velocidadMaxima;
+    }
+}
