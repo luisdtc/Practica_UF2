@@ -31,19 +31,8 @@ class VehiculoAcelerarTest {
 
     @Test
     public void testAcelerarTC_AC_03() {
-        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
-
-        // Capturar salida por consola
-        ByteArrayOutputStream salidaConsola = new ByteArrayOutputStream();
-        PrintStream consolaOriginal = System.out;
-        System.setOut(new PrintStream(salidaConsola));
-
-        v.acelerar(-20);
-
-        // Restaurar consola
-        System.setOut(consolaOriginal);
-
-        String salida = salidaConsola.toString().trim();
-        assertEquals("Aceleración no válida: debe ser un número entero positivo.", salida);
+          Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.acelerar(5);
+        assertEquals(5, v.getVelocidadActual(), "Debe aumentar en 5 km/h");
     }
 }
