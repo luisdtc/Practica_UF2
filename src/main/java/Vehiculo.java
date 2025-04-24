@@ -19,10 +19,12 @@ public class Vehiculo {
         }
 
         velocidadActual += incremento;
-
         if (velocidadActual > velocidadMaxima) {
             velocidadActual = velocidadMaxima;
         }
+    }
+    public void acelerar(int incremento) {
+        velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
     }
 
     public void parar() {
