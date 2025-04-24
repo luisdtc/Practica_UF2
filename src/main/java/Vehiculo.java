@@ -1,5 +1,4 @@
 public class Vehiculo {
-
     private String marca;
     private String modelo;
     private int velocidadMaxima;
@@ -13,14 +12,7 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {
-         velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
-        if (incremento < 0) {
-            throw new IllegalArgumentException("El incremento debe ser positivo.");
-        }
-        velocidadActual += incremento;
-        if (velocidadActual > velocidadMaxima) {
-            velocidadActual = velocidadMaxima;
-        }
+        velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
     }
 
     public void frenar(int decremento) {
@@ -34,16 +26,5 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidadActual;
     }
+} 
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public int getVelocidadMaxima() {
-        return velocidadMaxima;
-    }
-}
