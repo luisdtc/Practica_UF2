@@ -7,19 +7,19 @@ public class VehiculoPararTest {
     private Vehiculo vehiculo;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         vehiculo = new Vehiculo("Toyota", "Corolla", 100);
     }
 
     @Test
-    void testPararVehiculoEnMarcha() {
+    public void testPararVehiculoEnMarcha() {
         vehiculo.acelerar(80);
         vehiculo.parar();
         assertEquals(0, vehiculo.getVelocidadActual());
     }
 
     @Test
-    void testPararVehiculoDetenido() {
+    public void testPararVehiculoDetenido() {
         vehiculo.parar();
         assertEquals(0, vehiculo.getVelocidadActual());
     }
