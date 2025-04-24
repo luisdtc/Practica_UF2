@@ -26,6 +26,7 @@ class VehiculoFrenarTest {
         assertEquals(0, vehiculo.getVelocidadActual());
     }
 
+
     @Test
     public void testFrenarTC_FR_03() {
         Vehiculo v = new Vehiculo("Seat", "Ibiza", 150);
