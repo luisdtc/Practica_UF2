@@ -11,6 +11,7 @@ public class Vehiculo {
         this.velocidadMaxima = velocidadMaxima;
         this.velocidadActual = 0;
     }
+	
     public String getMarca() {
         return marca;
     }
