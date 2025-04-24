@@ -46,4 +46,4 @@ public class Vehiculo {
     public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
-
+}
