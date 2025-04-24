@@ -44,12 +44,7 @@ public class Vehiculo {
     public void frenar(int decremento) {
         if (decremento > 0) this.velocidadActual = Math.max(this.velocidadActual - decremento, 0);
     }
-    public class Vehiculo {
-	// ... (atributos, acelerar, frenar, parar) ...
-
-	public boolean esDeportivo() {
+    public boolean esDeportivo() {
     	return this.velocidadMaxima > 200;
 	}
-}
-
 }
