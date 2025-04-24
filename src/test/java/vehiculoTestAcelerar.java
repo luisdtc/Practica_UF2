@@ -31,7 +31,7 @@ class VehiculoAcelerarTest {
 
     @Test
     void testAcelerarTC_AC_03() {
-        Vehiculo Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
         vehiculo.acelerar(-20);
         assertEquals(0, vehiculo.getVelocidadActual()); // La velocidad inicial es 0
     }
