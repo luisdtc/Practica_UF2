@@ -11,26 +11,18 @@ class VehiculoPararTest {
 
     @Test
     void testPararTC_PA_01() {
-
         Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 100);
-
-        // Acelerar a 80
         vehiculo.acelerar(80);
-
         vehiculo.parar();
-
         // Verificar que la velocidad es 0
-        assertEquals(0, vehiculo.getVelocidadActual(), "La velocidad debe ser 0 después de parar.");
+        assertEquals(0, vehiculo.getVelocidadActual());
     }
 
     @Test
     void testPararTC_PA_02() {
-
         Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 100);
-
         vehiculo.parar();
-
         // Verificar que la velocidad sigue siendo 0
-        assertEquals(0, vehiculo.getVelocidadActual(), "La velocidad debe permanecer en 0 después de llamar a parar.");
+        assertEquals(0, vehiculo.getVelocidadActual());
     }
 }
