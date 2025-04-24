@@ -12,7 +12,15 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {
-        velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
+        if (incremento <= 0) {
+            System.out.println("Aceleración no válida: debe ser un número entero positivo.");
+            return;
+        }
+
+        velocidadActual += incremento;
+        if (velocidadActual > velocidadMaxima) {
+            velocidadActual = velocidadMaxima;
+        }
     }
 
     public void frenar(int decremento) {
