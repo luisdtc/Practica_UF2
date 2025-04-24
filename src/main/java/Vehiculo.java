@@ -26,7 +26,7 @@ public class Vehiculo {
     }
 
     public void parar() {
-        velocidadActual = 0;
+        this.velocidadActual = 0;
     }
 
     public String getMarca() {
