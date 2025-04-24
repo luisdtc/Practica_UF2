@@ -25,8 +25,8 @@ class VehiculoAcelerarTest {
 
         v.acelerar(50); // Intentamos aumentar 50 (60 + 50 = 110 > 100)
 
-        assertEquals(100, v.getVelocidadActual());
-                "La velocidad no debe superar la velocidad máxima de 100 km/h");
+        assertEquals(100, v.getVelocidadActual(), "La velocidad no debe superar la velocidad máxima de 100 km/h");
+
     }
 
     @Test
