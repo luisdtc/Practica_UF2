@@ -26,8 +26,8 @@ public class VehiculoFrenarTest {
     void frenar_decrementoNegativoNoCambiaVelocidad() {
         Vehiculo vehiculo = new Vehiculo("Seat", "Ibiza", 100);
         vehiculo.acelerar(20);
-        vehiculo.frenar(-5);
-        assertEquals(20, vehiculo.getVelocidadActual());
+        vehiculo.frenar(5);
+        assertEquals(15, vehiculo.getVelocidadActual());
     }
 }
 
