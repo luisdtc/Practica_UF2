@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class VehiculoPararTest {
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
     }
 
     @Test
