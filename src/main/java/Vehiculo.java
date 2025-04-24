@@ -1,8 +1,8 @@
 public class Vehiculo {
 
-    private final String marca;
-    private final String modelo;
-    private final int velocidadMaxima;
+    private String marca;
+    private String modelo;
+    private int velocidadMaxima;
     private int velocidadActual;
 
     public Vehiculo(String marca, String modelo, int velocidadMaxima) {
@@ -13,24 +13,19 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {
-        if (incremento <= 0) {
-            System.out.println("Aceleración no válida: debe ser un número entero positivo.");
-            return;
+        if (incremento < 0) {
+            throw new IllegalArgumentException("El incremento debe ser positivo.");
         }
-
         velocidadActual += incremento;
-
         if (velocidadActual > velocidadMaxima) {
             velocidadActual = velocidadMaxima;
         }
     }
 
     public void frenar(int decremento) {
-        if (decremento <= 0) {
-            System.out.println("Frenado no válido: debe ser un número entero positivo.");
-            return;
+        if (decremento < 0) {
+            throw new IllegalArgumentException("El decremento debe ser positivo.");
         }
-
         velocidadActual -= decremento;
         if (velocidadActual < 0) {
             velocidadActual = 0;
@@ -39,6 +34,10 @@ public class Vehiculo {
 
     public void parar() {
         velocidadActual = 0;
+    }
+
+    public int getVelocidadActual() {
+        return velocidadActual;
     }
 
     public String getMarca() {
@@ -53,10 +52,8 @@ public class Vehiculo {
         return velocidadMaxima;
     }
 
-    public int getVelocidadActual() {
-        return velocidadActual;
+    @Override
+    public String toString() {
+        return String.format("Vehiculo %s %s - Velocidad: %d km/h", marca, modelo, velocidadActual);
     }
-
-
-
 }
