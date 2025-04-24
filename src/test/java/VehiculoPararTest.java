@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class VehiculoPararTest {
+public class VehiculoPararTest {
 
     private Vehiculo vehiculo;
 
