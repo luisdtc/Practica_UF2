@@ -23,12 +23,8 @@ public class Vehiculo {
     }
 
     public void frenar(int decremento) {
-        if (decremento < 0) {
-            throw new IllegalArgumentException("El decremento debe ser positivo.");
-        }
-        velocidadActual -= decremento;
-        if (velocidadActual < 0) {
-            velocidadActual = 0;
+        if (decremento > 0) {
+            this.velocidadActual = Math.max(this.velocidadActual - decremento, 0);
         }
     }
 
@@ -52,8 +48,3 @@ public class Vehiculo {
         return velocidadMaxima;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Vehiculo %s %s - Velocidad: %d km/h", marca, modelo, velocidadActual);
-    }
-}
