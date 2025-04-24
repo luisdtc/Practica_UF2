@@ -25,6 +25,7 @@ public class Vehiculo {
         }
     }
 
+
     public String getMarca() {
         return marca;
     }
