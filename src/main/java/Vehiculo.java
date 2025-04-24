@@ -1,8 +1,7 @@
 public class Vehiculo {
-
-    private final String marca;
-    private final String modelo;
-    private final int velocidadMaxima;
+    private String marca;
+    private String modelo;
+    private int velocidadMaxima;
     private int velocidadActual;
 
     public Vehiculo(String marca, String modelo, int velocidadMaxima) {
@@ -24,8 +23,16 @@ public class Vehiculo {
         }
     }
 
+    public void frenar(int decremento) {
+        velocidadActual = Math.max(velocidadActual - decremento, 0);
+    }
+
     public void parar() {
         this.velocidadActual = 0;
+    }
+
+    public int getVelocidadActual() {
+        return velocidadActual;
     }
 
     public String getMarca() {
@@ -38,9 +45,5 @@ public class Vehiculo {
 
     public int getVelocidadMaxima() {
         return velocidadMaxima;
-    }
-
-    public int getVelocidadActual() {
-        return velocidadActual;
     }
 }
