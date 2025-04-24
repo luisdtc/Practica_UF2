@@ -10,7 +10,7 @@ public class Vehiculo {
         this.modelo = modelo;
         this.velocidadMaxima = velocidadMaxima;
         this.velocidadActual = 0;
-
+    }
     public String getMarca() {
         return marca;
     }
