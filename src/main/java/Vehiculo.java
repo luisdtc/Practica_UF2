@@ -25,6 +25,18 @@ public class Vehiculo {
         }
     }
 
+    public void frenar(int decremento) {
+        if (decremento <= 0) {
+            System.out.println("Frenado no válido: debe ser un número entero positivo.");
+            return;
+        }
+
+        velocidadActual -= decremento;
+        if (velocidadActual < 0) {
+            velocidadActual = 0;
+        }
+    }
+
     public void parar() {
         velocidadActual = 0;
     }
@@ -44,7 +56,7 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidadActual;
     }
-    public void frenar(int decremento) {
-        if (decremento > 0) this.velocidadActual = Math.max(this.velocidadActual - decremento, 0);
-    }
+
+
+
 }
