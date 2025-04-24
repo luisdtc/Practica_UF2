@@ -1,26 +1,36 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class VehiculoPararTest {
-
-    private Vehiculo vehiculo;
+class VehiculoPararTest {
 
     @BeforeEach
     public void setUp() {
-        vehiculo = new Vehiculo("Toyota", "Corolla", 100);
     }
 
     @Test
-    public void testPararVehiculoEnMarcha() {
+    public void testPararTC_PA_01() {
+
+        Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 100);
+
+        // Acelerar a 80
         vehiculo.acelerar(80);
+
         vehiculo.parar();
-        assertEquals(0, vehiculo.getVelocidadActual());
+
+        // Verificar que la velocidad es 0
+        assertEquals(0, vehiculo.getVelocidadActual(), "La velocidad debe ser 0 después de parar.");
     }
 
     @Test
-    public void testPararVehiculoDetenido() {
+    public void testPararTC_PA_02() {
+
+        Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 100);
+
         vehiculo.parar();
-        assertEquals(0, vehiculo.getVelocidadActual());
+
+        // Verificar que la velocidad sigue siendo 0
+        assertEquals(0, vehiculo.getVelocidadActual(), "La velocidad debe permanecer en 0 después de llamar a parar.");
     }
 }
