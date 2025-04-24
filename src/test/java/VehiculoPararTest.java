@@ -17,7 +17,10 @@ class VehiculoPararTest {
         // Verificar que la velocidad es 0
         assertEquals(0, vehiculo.getVelocidadActual());
     }
-
+    @BeforeEach
+    void setUp() {
+    }
+    
     @Test
     void testPararTC_PA_02() {
         Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 100);
