@@ -25,6 +25,8 @@ public class Vehiculo {
         }
     }
 
+    public void parar() {
+    }
 
     public String getMarca() {
         return marca;
