@@ -13,6 +13,7 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {
+         velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
         if (incremento < 0) {
             throw new IllegalArgumentException("El incremento debe ser positivo.");
         }
