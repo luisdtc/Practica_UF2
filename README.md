@@ -41,7 +41,7 @@ Los tests están contenidos en la clase `VehiculoAcelerarTest` y cubren los sigu
 |--------------|----------------------------------------------------------------|
 | `TC_AC_01`   | Aceleración válida (suma de 10 km/h, sin exceder límite)       |
 | `TC_AC_02`   | Aceleración que excede la velocidad máxima (ajuste al tope)    |
-| `TC_AC_03`   | Aceleración válida , intenta superar velocidad maxima          |
+| `TC_AC_03`   | Aceleración negativa, incremento inválido         |
 
 
 Los test están contenidos en la clase `VehículoFrenarTest` y cubren los siguientes casos:
@@ -49,8 +49,7 @@ Los test están contenidos en la clase `VehículoFrenarTest` y cubren los siguie
 |--------------|----------------------------------------------------------------|
 | `TC_FR_01`   | El vehículo frena correctamente                                |
 | `TC_FR_02`   | Decremento superior a velocidad; el vehículo se detiene        |
-| `TC_FR_03`   | Freno inferior a velocidad; el vehículo no se detiene          |
-| `TC_FR_04`   | El decremento es inválido, muestra error                       |
+| `TC_FR_03`   | El decremento es inválido, muestra error                       |
 
 Los test están contenidos en la clase `VehículoPararTest` y cubren los siguientes casos:
 | Código       | Caso de prueba                                                 |
