@@ -30,10 +30,15 @@ public class Vehiculo {
     public void parar() {
         this.velocidadActual = 0;
     }
-
+  
+    public boolean esDeportivo() {
+    	return this.velocidadMaxima > 200;
+  	}
+  
     public int getVelocidadActual() {
         return velocidadActual;
     }
+
 
     public String getMarca() {
         return marca;
