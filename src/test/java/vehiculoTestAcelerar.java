@@ -28,11 +28,12 @@ class VehiculoAcelerarTest {
         assertEquals(100, v.getVelocidadActual(), "La velocidad no debe superar la velocidad máxima de 100 km/h");
 
     }
-
+    
     @Test
-    public void testAcelerarTC_AC_03() {
-          Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
-        v.acelerar(5);
-        assertEquals(5, v.getVelocidadActual(), "Debe aumentar en 5 km/h");
+    public void testFrenarTC_FR_03() {
+        Vehiculo vehiculo = new Vehiculo("Seat", "Ibiza", 150);
+        vehiculo.acelerar(20);
+        vehiculo.frenar(-5);
+        assertEquals(20, vehiculo.getVelocidadActual());
     }
 }
