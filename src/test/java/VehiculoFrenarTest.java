@@ -33,3 +33,4 @@ public class VehiculoFrenarTest {
         assertEquals(15, vehiculo.getVelocidadActual());
     }
 }
+
