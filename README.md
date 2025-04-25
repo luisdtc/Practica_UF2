@@ -57,9 +57,13 @@ Los test están contenidos en la clase `VehículoPararTest` y cubren los siguien
 |--------------|----------------------------------------------------------------|
 | `TC_PA_01`   | Velocidad pasa a 0; detiene el vehículo                        |
 | `TC_PA_02`   | El vehículo ya está parado                                     |
+
+
+Los test están contenidos en la clase `VehiculoEsDeportivoTest` y cubren los siguientes casos:
+| Código       | Caso de prueba                                                 |
+|--------------|----------------------------------------------------------------|
 | `TC_DE_01`   | Valor supera el mínimo para cumplir requisito                  |
 | `TC_DE_002`  | Valor insuficiente para cumplir requisito                      |
-
 
 
 Los tests siguen las convenciones de TDD (Red → Green → Refactor), y están correctamente nombrados para trazabilidad.
