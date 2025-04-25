@@ -28,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
     @Test
     void testFrenarTC_FR_03() {
-        Vehiculo vehiculo = new Vehiculo("Seat", "Ibiza", 150);
         vehiculo.acelerar(20);
         vehiculo.frenar(-5);
         assertEquals(20, vehiculo.getVelocidadActual());
