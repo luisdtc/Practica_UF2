@@ -26,8 +26,9 @@ class VehiculoAcelerarTest {
         v.acelerar(50); // Intentamos aumentar 50 (60 + 50 = 110 > 100)
 
         assertEquals(100, v.getVelocidadActual(), "La velocidad no debe superar la velocidad máxima de 100 km/h");
-
-@Test
+    }
+    
+    @Test
     public void testAcelerarTC_AC_03() {
         Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
 
