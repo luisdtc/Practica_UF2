@@ -5,7 +5,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class VehiculoFrenarTest {
+class VehiculoEsDeportivoTest {
 
 	@BeforeEach
 	void setUp() {
