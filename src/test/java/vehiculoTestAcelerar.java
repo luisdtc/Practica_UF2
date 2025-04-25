@@ -27,13 +27,21 @@ class VehiculoAcelerarTest {
 
         assertEquals(100, v.getVelocidadActual(), "La velocidad no debe superar la velocidad máxima de 100 km/h");
 
-    }
-    
-    @Test
-    public void testFrenarTC_FR_03() {
-        Vehiculo vehiculo = new Vehiculo("Seat", "Ibiza", 150);
-        vehiculo.acelerar(20);
-        vehiculo.frenar(-5);
-        assertEquals(20, vehiculo.getVelocidadActual());
+@Test
+    public void testAcelerarTC_AC_03() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+
+        // Capturar salida por consola
+        ByteArrayOutputStream salidaConsola = new ByteArrayOutputStream();
+        PrintStream consolaOriginal = System.out;
+        System.setOut(new PrintStream(salidaConsola));
+
+        v.acelerar(-20);
+
+        // Restaurar consola
+        System.setOut(consolaOriginal);
+
+        String salida = salidaConsola.toString().trim();
+        assertEquals("Aceleración no válida: debe ser un número entero positivo.", salida);
     }
 }
