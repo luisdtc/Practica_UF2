@@ -28,9 +28,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
     @Test
     void testFrenarTC_FR_03() {
-        vehiculo.acelerar(20);
-        vehiculo.frenar(-5);
-        assertEquals(20, vehiculo.getVelocidadActual());
-    }
+    Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+
+    // Capturar salida por consola
+    ByteArrayOutputStream salidaConsola = new ByteArrayOutputStream();
+    PrintStream consolaOriginal = System.out;
+    System.setOut(new PrintStream(salidaConsola));
+
+    v.frenar(-10);
+
+    // Restaurar consola
+    System.setOut(consolaOriginal);
+
+    String salida = salidaConsola.toString().trim();
+    assertEquals("Frenado no válido: debe ser un número entero positivo.", salida);
+}
 }
 
